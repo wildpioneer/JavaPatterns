@@ -1,4 +1,4 @@
-package com.org.javapatterns;
+package org.wp.javapatterns.pages;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;

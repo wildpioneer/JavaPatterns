@@ -1,4 +1,4 @@
-package com.org.javapatterns;
+package org.wp.javapatterns.tests;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
@@ -7,6 +7,8 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
+import org.wp.javapatterns.pages.MainPage;
+import org.wp.javapatterns.utils.ReadProperties;
 
 import java.time.Duration;
 
@@ -61,5 +63,10 @@ public class MainPageTest {
         WebElement productsList = driver.findElement(By.id("products-page"));
         assertTrue(productsList.isDisplayed());
         assertEquals(driver.getTitle(), "All Developer Tools and Products by JetBrains");
+    }
+
+    @Test
+    public void navigationToTestRail() {
+        driver.get(ReadProperties.getUrl());
     }
 }
